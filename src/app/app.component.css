@@ -1,0 +1,32 @@
+.footer{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+.route-container {
+    position:relative;
+}
+.route-container>* {
+    display:block;
+}
+body{
+    background: #00000000 !important;
+}
+@media(max-width: 600px){
+    .page-body{
+        padding: 70px 10px !important;
+    }
+}
+.page-body{
+    padding: 70px 20px;
+    width: 100%;
+    background: #ffffff;
+    transition: .3s;
+    height: 100vh;
+    z-index: 10;
+}
+#main-navbar{
+    position: fixed;
+    z-index: 999;
+}

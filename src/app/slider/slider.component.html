@@ -1,0 +1,9 @@
+<ng2-carousel-3d  [slides]="slides" [options]="options" class="col-12" #carousel>
+  <ng2-carousel-3d-slide  *ngFor="let slide of slides; let i = index" (click)="slideClicked(i,$event)">
+    <div class="slide-content">
+
+      <img (swiperight)="nextSlide($event)" (swipeleft)="prevSlide($event)" class="slide-img" src="{{slide.photo}}" alt=""/>
+      <label (click)="labelClick(slide.url)" class="slide-caption" routerLink="{{slide.url}}">{{slide.caption}}</label>
+    </div>
+  </ng2-carousel-3d-slide>
+</ng2-carousel-3d>

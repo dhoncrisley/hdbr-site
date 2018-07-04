@@ -1,0 +1,5 @@
+@import "../app.component.css";
+
+.page-body{
+    background: rgb(255, 104, 104) !important;
+}

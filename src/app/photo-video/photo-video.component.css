@@ -1,0 +1,11 @@
+@import "../app.component.css";
+
+.page-body{
+    background: rgb(255, 152, 104) !important;
+}
+.column{
+    margin: 10px;
+}
+.main{
+
+}

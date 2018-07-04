@@ -1,0 +1,25 @@
+.slide-img {
+    height: auto;
+    width: 100%;
+    overflow: hidden !important;
+}
+.slide-caption{
+    position: absolute;
+    height: auto;
+    width: 91.5%;
+    font-size: 8pt;
+    bottom: 0;
+    word-wrap: break-word;
+    cursor: pointer !important;
+    left: 5px;
+      padding: 10px;
+      color: white;
+      background: rgba(0, 0, 0, 0.411);
+  }
+
+  .slide-content{
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden;
+    background: black !important;
+  }
