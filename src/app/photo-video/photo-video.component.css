@@ -1,11 +1,22 @@
 @import "../app.component.css";
 
 .page-body{
-    background: rgb(255, 152, 104) !important;
+    background: url('../../assets/images/02.jpg') center;
+    overflow-anchor: initial;
+    background-size: 105vh;
 }
 .column{
     margin: 10px;
 }
 .main{
 
+}
+.section-caption, .section-title .section-photo{
+    position: relative;
+}
+.page-bg{
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }

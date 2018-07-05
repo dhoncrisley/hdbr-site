@@ -15,6 +15,7 @@ import { ComVisualComponent } from './com-visual/com-visual.component';
 import { Design3dComponent } from './design3d/design3d.component';
 import { AppRouting } from './app.routing';
 import { HomeComponent } from './home/home.component';
+import { MouseWheelDirective } from './mouse-wheel.directive';
 
 export class HammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -32,7 +33,8 @@ export class HammerConfig extends HammerGestureConfig {
     AudioComponent,
     ComVisualComponent,
     Design3dComponent,
-    HomeComponent
+    HomeComponent,
+    MouseWheelDirective,
   ],
   imports: [
     BrowserModule,

@@ -10,14 +10,14 @@ import { HomeComponent } from './home/home.component';
 
 const routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    {path: 'home', component: HomeComponent,  data: { state: 'home'}},
-    {path: 'design', component: DesignComponent,  data: { state: 'about'}},
-    {path: 'photo-video', component: PhotoVideoComponent,  data: { state: 'photo-video'}},
-    {path: 'web-design', component: WebDesignComponent,  data: { state: 'web-design'}},
-    {path: 'audio', component: AudioComponent,  data: { state: 'audio'}},
-    {path: 'com-visual', component: ComVisualComponent, data: { state: 'com-visual'}},
-    {path: '3d', component: Design3dComponent,  data: { state: '3d'}},
-    { path: '**', component: HomeComponent, data: { state: 'home'} }
+    {path: 'home', component: HomeComponent,  data: { state: 0}},
+    {path: 'photo-video', component: PhotoVideoComponent,  data: { state: 1}},
+    {path: 'web-design', component: WebDesignComponent,  data: { state: 2}},
+    {path: 'audio', component: AudioComponent,  data: { state: 3}},
+    {path: 'design', component: DesignComponent,  data: { state: 4}},
+    {path: 'com-visual', component: ComVisualComponent, data: { state: 5}},
+    {path: '3d', component: Design3dComponent,  data: { state: 6}},
+    { path: '**', component: HomeComponent, data: { state: 0} }
   ];
 
 export const AppRouting = RouterModule.forRoot(routes, { 
