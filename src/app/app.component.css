@@ -21,11 +21,17 @@ body{
 .page-body{
     padding: 70px 20px;
     width: 100%;
-    background: #ffffff;
+    overflow: hidden;
+    background: #ffffff00;
     min-height: 100vh;
     z-index: 10;
+    
 }
 #main-navbar{
     position: fixed;
     z-index: 999;
+}
+.card{
+    border: none;
+    background: none;
 }

@@ -29,14 +29,11 @@ export class NavigationComponent implements OnInit {
   }
   public routeWithData(item) {
     this.rout.navigate([item.url, { itemData: item }]);
-    console.log('routing data ' + item.id)
   }
   public routeTo(i) {
-    console.log(i);
     this.rout.navigateByUrl(this.menuItens[i].url);
   }
   public setRoutePage(actualState, direction: boolean) {
-    console.log("ActualState "+ actualState)
     if(actualState >= 0 && actualState < this.menuItens.length){
       this.routeTo(actualState);
     } else {

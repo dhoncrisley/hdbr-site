@@ -1,4 +1,23 @@
-<div class="page-body page-bg">
+<div class="page-body ">
+
+  <div class="video-background">
+    <div class="video-foreground">
+      <iframe src="https://www.youtube.com/embed/24nBsXE7yAU?controls=0&showinfo=0&rel=0&autoplay=1&loop=1" frameborder="0"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div id="vidtop-content" >
+    <div class="vid-info section-photo">
+      <h1>{{item.name}}</h1>
+      <p>{{item.caption}}
+          <!-- <a href="/500/Use-YouTube-Videos-as-Fullscreen-Web-Page-Backgrounds">Full article</a> -->
+    </div>
+  </div>
+</div>
+
+<!-- <img  class="page-bg">
+<div class="page-body">
 
   <main class="main">
 
@@ -7,18 +26,23 @@
         <div class="col-md-4">
   
           <div class="card align-center section-photo">
-            <img class="card-img-top" src="../../assets/images/02.jpg" alt="">
+            <img class="card-img-top" src="{{item.photo}}" alt="">
+            <h3 class="photo-caption">Some Text</h3>
           </div>
         </div>
         <div class="col-md-8">
-            <h1 class="section-title">
-                {{item.name}}
-              </h1>
+            <div class="row">
+              <h1 class="section-title">{{item.name}}</h1>
+              <p class="section-caption">{{item.caption}}</p>
+            </div>
+            <div class="row">
+              <video src="https://www.youtube.com/embed/7yxkAaaPsX4"></video>
   
-            <p class="section-caption">{{item.caption}}</p>
+            </div>
   
-        </div>
+          </div>
       </div>
     </div>
   </main>
 </div>
+ -->

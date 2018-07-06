@@ -2,9 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Routes } from '@angular/router';
 import { WebDesignComponent } from '../web-design/web-design.component';
 import {PagesService} from '../pages.service'
-const routes: Routes = [
-  { path: 'app-web-design', component: WebDesignComponent }
-];
 
 @Component({
   selector: 'app-slider',

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Page } from './models/page.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +10,8 @@ export class PagesService {
     id: 0,
     name: 'Home',
     url: '/home',
-    caption: 'Produzimos e editamos vídeos institucionais e fotos editoriais para órgãos públicos e privados, vídeos para promoção de eventos, documentários, videoclipes musicais, campanhas políticas, comerciais e educativas. Também dispomos de Set de Filmagem (estúdio chroma) próprio para gravações.',
-    photo: '../assets/images/02.jpg'
+    caption: 'Slogan.',
+    photo: '../assets/images/H-logo.png'
   },
   {
     id: 1,
@@ -35,29 +36,31 @@ export class PagesService {
     name: 'Design',
     url: '/design',
     caption: 'texto',
-    photo: '../assets/images/04.jpg'
+    photo: '../assets/images/03.jpg'
   }, {
     id: 5,
     name: 'Comunicação Visual',
     url: '/com-visual',
     caption: 'texto',
-    photo: '../assets/images/05.jpg'
+    photo: '../assets/images/03.jpg'
   },
    {
     id: 6,
     name: '3d',
     url: '/3d',
     caption: 'texto',
-    photo: '../assets/images/05.jpg'
+    photo: '../assets/images/03.jpg'
   }]
-  constructor() {
+
+  constructor( route: ActivatedRoute) {
 
   }
   public getSlides(): Array<Page> {
     return this.slides;
   }
-  public getSlideItem(i){
-    console.log(this.slides[i])
-    return this.slides[i];
+  public getSlideItem(route){
+    var state;
+    route.data.subscribe(r => {state = r.state});
+    return this.slides[state];
   }
 }

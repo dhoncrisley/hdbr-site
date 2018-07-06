@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { PagesService } from '../pages.service';
+import { ParallaxService } from '../parallax.service';
 
 @Component({
   selector: 'app-design',
@@ -7,11 +9,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./design.component.css']
 })
 export class DesignComponent implements OnInit {
-  constructor() {
-
+  item;
+  parallax: ParallaxService;
+  constructor(pgService: PagesService, parallax: ParallaxService, route: ActivatedRoute) {
+    
+    this.item = pgService.getSlideItem(route);
+    this.parallax = parallax;
    }
-
-  ngOnInit() {
+   ngOnInit() {
+     this.parallax.parallax();
   }
   
 }

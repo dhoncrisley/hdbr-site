@@ -3,7 +3,7 @@
     <div class="slide-content">
 
       <img (swiperight)="nextSlide($event)" (swipeleft)="prevSlide($event)" class="slide-img" src="{{slide.photo}}" alt=""/>
-      <label (click)="labelClick(slide.url)" class="slide-caption" routerLink="{{slide.url}}">{{slide.caption}}</label>
+      <label (click)="labelClick(slide.url)" class="slide-caption" routerLink="{{slide.url}}">{{slide.name}}</label>
     </div>
   </ng2-carousel-3d-slide>
 </ng2-carousel-3d>
