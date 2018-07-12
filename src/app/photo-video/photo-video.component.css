@@ -33,6 +33,60 @@ color: white;
     background-size: cover;
     background-position: center center;
 }
+
+.owl-carousel{
+    background: rgba(0, 0, 0, 0.315);
+    padding: 5px;
+    width: 100vw;
+    color: white;
+    
+}
+.carousel{
+    position: fixed;
+    bottom: 0px;
+    z-index: 1;
+    max-height: 30px;
+    left: 0;
+    transition: .5s;
+}
+.carousel:hover{
+    transition: .5s;
+    max-height: 300px;
+    
+}
+.owl-carousel div{
+    margin: 0 5px;
+    cursor: pointer;
+}
+.show-hide{
+    position: relative;
+    z-index: 99;
+    width: 100vw;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.315);
+}
+.carousel:hover > #icon{
+    transform: rotateX(180deg);
+}
+
+@media(min-width:756px){
+    .owl-carousel div img{
+        height: 110px;
+    }
+}
+
+.owl-carousel div img{
+    height: 20vh;
+    object-fit: cover;
+}
+
+.img-thumbnail{
+    border: 0;
+    background: none;
+    padding: 0;
+}
+
 * { box-sizing: border-box; }
 .video-background {
   background: #000;
@@ -65,7 +119,7 @@ color: white;
     background: rgb(0, 0, 0)
 }
 
-.vid-info { position: absolute; top: 50%; right: 10%; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info { position: absolute; top: 10%; right: 1.5%; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
 .vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
 .vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
 @media (min-aspect-ratio: 16/9) {

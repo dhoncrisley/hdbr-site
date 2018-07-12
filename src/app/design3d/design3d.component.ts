@@ -17,7 +17,7 @@ export class Design3dComponent implements OnInit {
     this.parallax = parallax;
    }
    ngOnInit() {
-     this.parallax.parallax();
+    // this.parallax.parallax();
   }
 
 }

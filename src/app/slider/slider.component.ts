@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { WebDesignComponent } from '../web-design/web-design.component';
 import {PagesService} from '../pages.service'
 
+declare var $:any;
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',

@@ -18,7 +18,7 @@ export class AudioComponent implements OnInit {
     this.parallax = parallax;
    }
    ngOnInit() {
-     this.parallax.parallax();
+    // this.parallax.parallax();
   }
 
 }

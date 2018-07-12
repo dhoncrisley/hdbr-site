@@ -27,7 +27,7 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
  
   }
-  public routeWithData(item) {
+  public routeWithData(item?) {
     this.rout.navigate([item.url, { itemData: item }]);
   }
   public routeTo(i) {

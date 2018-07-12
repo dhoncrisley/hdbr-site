@@ -14,7 +14,11 @@ export const routerTransition = [trigger('upTransition', [
       ], { optional: true }),
       query(':leave', [
         style({ transform: 'perspective(1000px) translateZ(0px)', 'z-index': '-1' }),
-        animate('1s cubic-bezier(1, 0, 0, 1)', style({ transform: 'perspective(1000px) translateZ(-300px)' }))
+        animate('1s cubic-bezier(1, 0, 0, 1)', style({ 
+          transform: 'perspective(1000px) translateZ(-300px)' ,
+          opacity: '0'
+        
+        }))
       ], { optional: true }),
     ]),
     query(':enter .block', stagger(400, [

@@ -2,8 +2,7 @@
 <!-- <div (swipedown)="close($event)" class="route-container" [@routeAnimation]="getDepth(myOutlet)">
     <router-outlet #myOutlet="outlet"></router-outlet>
 </div> -->
-<div #main mouseWheel (mouseWheelDown)="previousPage(o)" 
-(mouseWheelUp)="nextPage(o)">
+<div #main>
     
     <app-navigation id="main-navbar"></app-navigation>
     <main [@upTransition]="getState(o)">
