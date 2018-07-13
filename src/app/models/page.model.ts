@@ -1,7 +1,8 @@
-export class Page {
-    id;
-    name;
-    caption;
-    url;
-    photo;
+export interface Page {
+    id?;
+    name?;
+    caption?;
+    url?;
+    content?;
+    photo?;
 }

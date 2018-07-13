@@ -4,6 +4,7 @@
     overflow: hidden;
     object-fit: cover;
     background-size: 105vh;
+    text-shadow: 2px 2px 2px black;
 }
 .column{
     margin: 10px;
