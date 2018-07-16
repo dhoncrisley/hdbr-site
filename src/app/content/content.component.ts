@@ -19,7 +19,7 @@ export class ContentComponent implements OnInit {
     private route: ActivatedRoute) {
 
       this.videoSvc.videoId.subscribe(data => {
-        this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/" + data.id + "?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1");
+        this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/" + data.id + "?controls=0&showinfo=0&rel=0&autoplay=1&loop=1");
         this.photovideo.firstChoosed = true;
       });
   }

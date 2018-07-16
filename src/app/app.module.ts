@@ -1,8 +1,10 @@
 import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { Ng2Carousel3dModule }  from 'ng2-carousel-3d';
 import * as Hammer from 'hammerjs';
+import 'rxjs/add/operator/map';
 import 'hammer-timejs';
 import { SliderComponent } from './slider/slider.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -17,12 +19,26 @@ import { AppRouting } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { MouseWheelDirective } from './mouse-wheel.directive';
 import { ContentComponent } from './content/content.component';
-
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireModule } from 'angularfire2';
+import { HttpClientModule } from '@angular/common/http';
 export class HammerConfig extends HammerGestureConfig {
   overrides = <any>{
     'swipe': { direction: Hammer.DIRECTION_ALL }
   };
 }
+export const environment = {
+  production: false,
+  firebase: {
+    apiKey: "",
+  authDomain: "hdbr-b0a34.firebaseapp.com",
+  databaseURL: "https://hdbr-b0a34.firebaseio.com",
+  projectId: "hdbr-b0a34",
+  storageBucket: "hdbr-b0a34.appspot.com",
+  messagingSenderId: ""
+  }
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +56,10 @@ export class HammerConfig extends HammerGestureConfig {
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase, 'hdbr-b0a34'),
     BrowserAnimationsModule,
     Ng2Carousel3dModule,
     AppRouting

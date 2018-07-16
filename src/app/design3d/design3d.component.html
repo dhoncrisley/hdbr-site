@@ -1,26 +1,62 @@
-<img  class="page-bg">
+<img class="page-bg">
 <div class="page-body">
 
   <main class="main">
 
     <div class="container">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-4">
-  
+
           <div class="card align-center section-photo">
             <img class="card-img-top" src="{{item.photo}}" alt="">
             <h3 class="photo-caption">Some Text</h3>
           </div>
         </div>
-        <div class="col-md-8">
-            <div class="row">
-              <h1 class="section-title">{{item.name}}</h1>
-              <p class="section-caption">{{item.caption}}</p>
+        <div class="col-md-4">
+          <div class="row">
+            <h1 class="section-title">{{item.name}}</h1>
+            <p class="section-caption">{{item.caption}}</p>
+          </div>
+          <div class="row">
+            <ul [@listStagger]='pagesLenght'>
+              <li class="text" *ngFor="let page of pages | async">
+                {{page.name}}
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="container">
+              <h1>Add New User</h1>
+              <form (ngSubmit)="userSubmit()" addform="ngForm">
+                <div class="form-group">
+                  <label >Nome: {{ newPage.name }}</label>
+                  <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="newPage.name" required>
+                  
+                </div>
+                <div class="form-group">
+                  <label >Nome: {{ newPage.name }}</label>
+                  <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="newPage.name" required>
+                  
+                </div>
+
+                
+                <button type="submit" class="btn btn-default form-control" >Add User</button>
+              </form>
             </div>
-            <div class="row">
-  
-            </div>
-  
+          </div>
+
+
+        </div>
+      </div> -->
+      <div *ngFor="let post of posts" class="row" >
+        <div class="col-md-8" [@listStagger]='pagesLenght' >
+            <h1 [innerHtml]="post.title.rendered"></h1>
+            <div [innerHtml]="post.content.rendered"></div>
+
+            
           </div>
       </div>
     </div>
