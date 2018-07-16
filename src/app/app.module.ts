@@ -30,7 +30,7 @@ export class HammerConfig extends HammerGestureConfig {
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "",
+    apiKey: " ",
   authDomain: "hdbr-b0a34.firebaseapp.com",
   databaseURL: "https://hdbr-b0a34.firebaseio.com",
   projectId: "hdbr-b0a34",
